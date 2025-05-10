@@ -6,6 +6,7 @@ import WhyChooseUs from './components/WhyChooseUs.jsx';
 import Testimonials from './components/Testimonials.jsx';
 import ContactForm from './components/ContactForm.jsx';
 import ChatWidget from './components/ChatWidget.jsx';
+import { Toaster } from 'react-hot-toast';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
 
   return (
     <div className="min-h-screen  bg-lightBg dark:bg-darkBg text-gray-800 dark:text-white transition-colors duration-300">
+      <Toaster/>
       <Header toggleDarkMode={() => setDarkMode(!darkMode)} darkMode={darkMode} />
       <Hero />
       <HowItWorks />

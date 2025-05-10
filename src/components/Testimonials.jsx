@@ -1,4 +1,4 @@
-import React from 'react'
+import { motion } from 'framer-motion'
 
 const Testimonals = () => {
 
@@ -21,7 +21,9 @@ const Testimonals = () => {
 
   return (
      <section className='py-8 px-8'>
-      <h3 className="text-4xl font-bold text-center mb-8">Customer Testimonials</h3>
+     <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
+        <h3 className="text-4xl font-bold text-center mb-8">Customer Testimonials</h3>
+     </motion.div>
       <div className="grid md:grid-cols-2 gap-6">
         {testimonials.map((t, idx) => (
           <div key={idx} className="bg-white dark:bg-gray-800 text-gray-800 dark:text-white p-6 rounded-xl shadow hover:shadow-lg transition duration-300">

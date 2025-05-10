@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import toast from 'react-hot-toast';
 
 const ContactForm = () => {
   const [form, setForm] = useState({ name: '', email: '', company: '', license: '', message: '' });
@@ -23,7 +24,7 @@ const ContactForm = () => {
   
     if (Object.keys(err).length === 0) {
       console.log('Submitted Data:', form); 
-      alert('Form submitted!');
+      toast.success('Form submitted!');
       setForm({ name: '', email: '', company: '', license: '', message: '' }); 
     }
   };

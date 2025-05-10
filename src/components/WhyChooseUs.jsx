@@ -1,4 +1,4 @@
-import React from 'react'
+import { motion } from 'framer-motion'
 
 const WhyChoosenUs = () => {
 
@@ -11,7 +11,9 @@ const WhyChoosenUs = () => {
 
   return (
      <section className='px-8'>
-      <h3 className="text-4xl font-bold text-center mb-8">Why Choose Us</h3>
+      <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
+        <h2 className="text-4xl font-bold text-center mb-8">Why Choose Us</h2>
+      </motion.div>
       <div className="grid md:grid-cols-4 gap-6">
         {reasons.map((item, idx) => (
           <div key={idx} className="bg-white dark:bg-gray-800 text-gray-800 dark:text-white p-6 rounded-xl shadow hover:shadow-lg transition duration-300">

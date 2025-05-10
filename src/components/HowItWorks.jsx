@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { motion } from 'framer-motion'
 import { UploadCloud, BarChart3, DollarSign } from "lucide-react";
 
